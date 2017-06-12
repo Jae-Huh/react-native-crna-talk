@@ -28,17 +28,14 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.text}>{this.state.message}</Text>
         <Image style={styles.image} source={{uri: 'https://www.kenyabuzz.com/media/image-uploads/2016/04/27/landscape-1457107485-gettyimages-512366437.jpg'}} />
+        <Text style={styles.text}>{this.state.message}</Text>
         <Switch value={this.state.switchValue} onValueChange={(val) => this.onSwitchChange(val)} />
-        <View style={styles.vContainer}>
           <TouchableOpacity onPress={this.buttonPress} onLongPress={this.buttonLongPress}>
             <View style={styles.v1}>
               <Text>Touch me!</Text>
             </View>
           </TouchableOpacity>
-          <View style={styles.v2}></View>
-        </View>
       </View>
     );
   }
@@ -57,19 +54,11 @@ const styles = StyleSheet.create({
   },
   image: {
     width: 300,
-    height: 200
-  },
-  vContainer: {
-    flexDirection: 'row'
+    height: 300
   },
   v1: {
     backgroundColor: 'pink',
-    height:100,
+    height:50,
     width: 100
   },
-  v2: {
-    backgroundColor: 'orange',
-    height: 50,
-    width: 50
-  }
 });
