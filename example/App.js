@@ -28,7 +28,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>{this.state.message}</Text>
+        <Text style={styles.text}>{this.state.message}</Text>
         <Image style={styles.image} source={{uri: 'https://www.kenyabuzz.com/media/image-uploads/2016/04/27/landscape-1457107485-gettyimages-512366437.jpg'}} />
         <Switch value={this.state.switchValue} onValueChange={(val) => this.onSwitchChange(val)} />
         <View style={styles.vContainer}>
@@ -50,6 +50,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  text: {
+    fontSize: 30,
+    fontWeight: 'bold'
   },
   image: {
     width: 300,
